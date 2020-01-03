@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h2>Book a bus</h2>
+    <div class="form-group">
+      <form class="" action="{{ url_for('routeup.add') }}" method="post">
+        {{ form.csrf_token }}
+        {{ form.reg_number.label }}: {{ form.reg_number }}
+        <br/>
+        {{ form.origin.label }}: {{ form.origin }}
+        <br/>
+        {{ form.destination.label }}: {{ form.destination }}
+        <br/>
+        {{ form.departure_time.label }}: {{ form.departure_time }}
+        <br>
+        {# displaying errors #}
+        {% if form.errors %}
+          <ul class="errors">
+            {% for field_name, field_errors in form.errors|dictsort if field_errors %}
+                {% for error in field_errors %}
+                    <li>{{ form[field_name].label }}: {{ error }}</li>
+                {% endfor %}
+            {% endfor %}
+          </ul>
+        {% endif %}
+        <br/>
+        {{ form.submit }}
+      </form>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/all.css">
+  </head>
+  <body>
+    <main class="cover">
+      <header class="header">
+        {% block header %}
+          <h2>RouteUp</h2>
+        {% endblock %}
+      </header>
+      {% block body %}
+
+      {% endblock %}
+    </main>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <section class="row">
+      <ul>
+        {% for coach in coaches %}
+        <span>
+          <a href="#"><li>{{ coach.id }} {{ coach }}</li></a>
+          <a href="{{ url_for('routeup.remove', id=coach.id) }}">Delete</a>
+        </span>
+        {% endfor %}
+      </ul>
+    </section>
+{% endblock %}
