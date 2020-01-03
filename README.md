@@ -1,5 +1,5 @@
 # RouteUp
-Transport booking backend transport route info api service
+Transport booking backend + transport & route info api service
 
 if you're in a bash environment run the shell script (start.sh) to run the program
 else run "python wsgi.py" to run the program on windows.
